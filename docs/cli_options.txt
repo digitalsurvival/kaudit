@@ -1,8 +1,0 @@
-Usage: kaudit --[options] filename
-
-Options:
-
---quiet
---verbose
---log-level=[1-5]
---log-path=/path/to/logfile (defaults to current directory, raises error if write permissions occur).
