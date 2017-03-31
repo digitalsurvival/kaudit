@@ -1,0 +1,473 @@
+mbox
+    description: Desktop Computer
+    product: ()
+    width: 64 bits
+    capabilities: smbios-2.7 dmi-2.7 vsyscall32
+    configuration: boot=normal chassis=desktop uuid=AAFE49C8-8DFB-11E1-8961-505054503030
+  *-core
+       description: Motherboard
+       product: DH67BL
+       vendor: Intel Corporation
+       physical id: 0
+       version: AAG10189-211
+       serial: BTBL21600DG5
+       slot: To be filled by O.E.M.
+     *-firmware
+          description: BIOS
+          vendor: Intel Corp.
+          physical id: 0
+          version: BLH6710H.86A.0155.2012.0509.1620
+          date: 05/09/2012
+          size: 64KiB
+          capacity: 960KiB
+          capabilities: pci upgrade shadowing cdboot bootselect socketedrom edd int13floppy1200 int13floppy720 int13floppy2880 int5printscreen int9keyboard int14serial int17printer acpi usb biosbootspecification uefi
+     *-cache:0
+          description: L1 cache
+          physical id: 4
+          size: 256KiB
+          capacity: 256KiB
+          capabilities: internal varies
+     *-cache:1
+          description: L2 cache
+          physical id: 5
+          size: 1MiB
+          capacity: 1MiB
+          capabilities: internal varies unified
+     *-cache:2
+          description: L3 cache
+          physical id: 6
+          size: 8MiB
+          capacity: 8MiB
+          capabilities: internal varies unified
+     *-memory
+          description: System Memory
+          physical id: 26
+          slot: System board or motherboard
+          size: 16GiB
+        *-bank:0
+             description: DIMM DDR3 Synchronous 1333 MHz (0.8 ns)
+             product: SUPERTALENT02
+             vendor: Undefined
+             physical id: 0
+             serial: 00000000
+             slot: DIMM3
+             size: 4GiB
+             width: 64 bits
+             clock: 1333MHz (0.8ns)
+        *-bank:1
+             description: DIMM DDR3 Synchronous 1333 MHz (0.8 ns)
+             product: SUPERTALENT02
+             vendor: Undefined
+             physical id: 1
+             serial: 00000000
+             slot: DIMM1
+             size: 4GiB
+             width: 64 bits
+             clock: 1333MHz (0.8ns)
+        *-bank:2
+             description: DIMM DDR3 Synchronous 1333 MHz (0.8 ns)
+             product: SUPERTALENT02
+             vendor: Undefined
+             physical id: 2
+             serial: 00000000
+             slot: DIMM4
+             size: 4GiB
+             width: 64 bits
+             clock: 1333MHz (0.8ns)
+        *-bank:3
+             description: DIMM DDR3 Synchronous 1333 MHz (0.8 ns)
+             product: SUPERTALENT02
+             vendor: Undefined
+             physical id: 3
+             serial: 00000000
+             slot: DIMM2
+             size: 4GiB
+             width: 64 bits
+             clock: 1333MHz (0.8ns)
+     *-cpu
+          description: CPU
+          product: Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz
+          vendor: Intel Corp.
+          physical id: 3c
+          bus info: cpu@0
+          version: Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz
+          slot: CPU 1
+          size: 3400MHz
+          capacity: 3800MHz
+          width: 64 bits
+          clock: 100MHz
+          capabilities: x86-64 fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm arat pln pts
+          configuration: cores=4 enabledcores=4 threads=8
+     *-pci
+          description: Host bridge
+          product: Xeon E3-1200 v2/3rd Gen Core processor DRAM Controller [8086:150]
+          vendor: Intel Corporation [8086]
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 09
+          width: 32 bits
+          clock: 33MHz
+          configuration: driver=ivb_uncore
+          resources: irq:0
+        *-pci:0
+             description: PCI bridge
+             product: Xeon E3-1200 v2/3rd Gen Core processor PCI Express Root Port [8086:151]
+             vendor: Intel Corporation [8086]
+             physical id: 1
+             bus info: pci@0000:00:01.0
+             version: 09
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pm msi pciexpress normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:24 ioport:e000(size=4096) memory:fe600000-fe6fffff ioport:e0000000(size=268435456)
+           *-display
+                description: VGA compatible controller
+                product: Juniper XT [Radeon HD 5770] [1002:68B8]
+                vendor: Advanced Micro Devices, Inc. [AMD/ATI] [1002]
+                physical id: 0
+                bus info: pci@0000:01:00.0
+                version: 00
+                width: 64 bits
+                clock: 33MHz
+                capabilities: pm pciexpress msi vga_controller bus_master cap_list rom
+                configuration: driver=radeon latency=0
+                resources: irq:28 memory:e0000000-efffffff memory:fe620000-fe63ffff ioport:e000(size=256) memory:c0000-dffff
+           *-multimedia
+                description: Audio device
+                product: Juniper HDMI Audio [Radeon HD 5700 Series] [1002:AA58]
+                vendor: Advanced Micro Devices, Inc. [AMD/ATI] [1002]
+                physical id: 0.1
+                bus info: pci@0000:01:00.1
+                version: 00
+                width: 64 bits
+                clock: 33MHz
+                capabilities: pm pciexpress msi bus_master cap_list
+                configuration: driver=snd_hda_intel latency=0
+                resources: irq:44 memory:fe640000-fe643fff
+        *-display
+             description: Display controller
+             product: Xeon E3-1200 v2/3rd Gen Core processor Graphics Controller [8086:162]
+             vendor: Intel Corporation [8086]
+             physical id: 2
+             bus info: pci@0000:00:02.0
+             version: 09
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msi pm bus_master cap_list
+             configuration: driver=i915 latency=0
+             resources: irq:29 memory:fe000000-fe3fffff memory:d0000000-dfffffff ioport:f000(size=64)
+        *-communication
+             description: Communication controller
+             product: 6 Series/C200 Series Chipset Family MEI Controller #1 [8086:1C3A]
+             vendor: Intel Corporation [8086]
+             physical id: 16
+             bus info: pci@0000:00:16.0
+             version: 04
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi bus_master cap_list
+             configuration: driver=mei_me latency=0
+             resources: irq:30 memory:fe729000-fe72900f
+        *-network
+             description: Ethernet interface
+             product: 82579V Gigabit Network Connection [8086:1503]
+             vendor: Intel Corporation [8086]
+             physical id: 19
+             bus info: pci@0000:00:19.0
+             logical name: eno1
+             version: 05
+             serial: e8:40:f2:ac:25:7a
+             capacity: 1Gbit/s
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm msi bus_master cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+             configuration: autonegotiation=on broadcast=yes driver=e1000e driverversion=3.2.6-k firmware=0.13-4 latency=0 link=no multicast=yes port=twisted pair
+             resources: irq:31 memory:fe700000-fe71ffff memory:fe728000-fe728fff ioport:f080(size=32)
+        *-usb:0
+             description: USB controller
+             product: 6 Series/C200 Series Chipset Family USB Enhanced Host Controller #2 [8086:1C2D]
+             vendor: Intel Corporation [8086]
+             physical id: 1a
+             bus info: pci@0000:00:1a.0
+             version: 05
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm debug ehci bus_master cap_list
+             configuration: driver=ehci-pci latency=0
+             resources: irq:16 memory:fe727000-fe7273ff
+        *-multimedia
+             description: Audio device
+             product: 6 Series/C200 Series Chipset Family High Definition Audio Controller [8086:1C20]
+             vendor: Intel Corporation [8086]
+             physical id: 1b
+             bus info: pci@0000:00:1b.0
+             version: 05
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi pciexpress bus_master cap_list
+             configuration: driver=snd_hda_intel latency=0
+             resources: irq:43 memory:fe720000-fe723fff
+        *-pci:1
+             description: PCI bridge
+             product: 6 Series/C200 Series Chipset Family PCI Express Root Port 1 [8086:1C10]
+             vendor: Intel Corporation [8086]
+             physical id: 1c
+             bus info: pci@0000:00:1c.0
+             version: b5
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:25
+           *-pci
+                description: PCI bridge
+                product: Integrated Technology Express, Inc. [1283:8892]
+                vendor: Integrated Technology Express, Inc. [1283]
+                physical id: 0
+                bus info: pci@0000:02:00.0
+                version: 30
+                width: 32 bits
+                clock: 33MHz
+                capabilities: pci pm subtractive_decode bus_master cap_list
+        *-pci:2
+             description: PCI bridge
+             product: 6 Series/C200 Series Chipset Family PCI Express Root Port 3 [8086:1C14]
+             vendor: Intel Corporation [8086]
+             physical id: 1c.2
+             bus info: pci@0000:00:1c.2
+             version: b5
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:26 ioport:d000(size=4096) memory:fe500000-fe5fffff
+           *-network
+                description: Ethernet interface
+                product: 82574L Gigabit Network Connection [8086:10D3]
+                vendor: Intel Corporation [8086]
+                physical id: 0
+                bus info: pci@0000:04:00.0
+                logical name: enp4s0
+                version: 00
+                serial: 68:05:ca:0a:19:62
+                size: 1Gbit/s
+                capacity: 1Gbit/s
+                width: 32 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress msix bus_master cap_list rom ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+                configuration: autonegotiation=on broadcast=yes driver=e1000e driverversion=3.2.6-k duplex=full firmware=1.8-0 ip=10.0.20.77 latency=0 link=yes multicast=yes port=twisted pair speed=1Gbit/s
+                resources: irq:18 memory:fe5c0000-fe5dffff memory:fe500000-fe57ffff ioport:d000(size=32) memory:fe5e0000-fe5e3fff memory:fe580000-fe5bffff
+        *-pci:3
+             description: PCI bridge
+             product: 6 Series/C200 Series Chipset Family PCI Express Root Port 4 [8086:1C16]
+             vendor: Intel Corporation [8086]
+             physical id: 1c.3
+             bus info: pci@0000:00:1c.3
+             version: b5
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:27 memory:fe400000-fe4fffff
+           *-usb
+                description: USB controller
+                product: uPD720200 USB 3.0 Host Controller [1033:194]
+                vendor: NEC Corporation [1033]
+                physical id: 0
+                bus info: pci@0000:05:00.0
+                version: 03
+                width: 64 bits
+                clock: 33MHz
+                capabilities: pm msi msix pciexpress xhci bus_master cap_list
+                configuration: driver=xhci_hcd latency=0
+                resources: irq:19 memory:fe400000-fe401fff
+        *-usb:1
+             description: USB controller
+             product: 6 Series/C200 Series Chipset Family USB Enhanced Host Controller #1 [8086:1C26]
+             vendor: Intel Corporation [8086]
+             physical id: 1d
+             bus info: pci@0000:00:1d.0
+             version: 05
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm debug ehci bus_master cap_list
+             configuration: driver=ehci-pci latency=0
+             resources: irq:23 memory:fe726000-fe7263ff
+        *-isa
+             description: ISA bridge
+             product: H67 Express Chipset Family LPC Controller [8086:1C4A]
+             vendor: Intel Corporation [8086]
+             physical id: 1f
+             bus info: pci@0000:00:1f.0
+             version: 05
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa bus_master cap_list
+             configuration: latency=0
+        *-storage
+             description: SATA controller
+             product: 6 Series/C200 Series Chipset Family SATA AHCI Controller [8086:1C02]
+             vendor: Intel Corporation [8086]
+             physical id: 1f.2
+             bus info: pci@0000:00:1f.2
+             version: 05
+             width: 32 bits
+             clock: 66MHz
+             capabilities: storage msi pm ahci_1.0 bus_master cap_list
+             configuration: driver=ahci latency=0
+             resources: irq:45 ioport:f0d0(size=8) ioport:f0c0(size=4) ioport:f0b0(size=8) ioport:f0a0(size=4) ioport:f060(size=32) memory:fe725000-fe7257ff
+        *-serial
+             description: SMBus
+             product: 6 Series/C200 Series Chipset Family SMBus Controller [8086:1C22]
+             vendor: Intel Corporation [8086]
+             physical id: 1f.3
+             bus info: pci@0000:00:1f.3
+             version: 05
+             width: 64 bits
+             clock: 33MHz
+             configuration: driver=i801_smbus latency=0
+             resources: irq:18 memory:fe724000-fe7240ff ioport:f040(size=32)
+     *-scsi:0
+          physical id: 1
+          logical name: scsi0
+          capabilities: emulated
+        *-disk
+             description: ATA Disk
+             product: Micron_M600_MTFD
+             physical id: 0.0.0
+             bus info: scsi@0:0.0.0
+             logical name: /dev/sda
+             version: MU03
+             serial: 15150F699109
+             size: 119GiB (128GB)
+             capabilities: gpt-1.00 partitioned partitioned:gpt
+             configuration: ansiversion=5 guid=ad932e1a-cf95-403b-bdc0-460b6a73797e sectorsize=4096
+           *-volume:0
+                description: Windows FAT volume
+                vendor: mkfs.fat
+                physical id: 1
+                bus info: scsi@0:0.0.0,1
+                logical name: /dev/sda1
+                version: FAT16
+                serial: ca1d-055a
+                size: 128MiB
+                capacity: 129MiB
+                capabilities: boot fat initialized
+                configuration: FATs=2 filesystem=fat name=efi
+           *-volume:1
+                description: Linux swap volume
+                physical id: 2
+                bus info: scsi@0:0.0.0,2
+                logical name: /dev/sda2
+                version: 1
+                serial: 198684c8-2b53-459e-a863-a82911042db5
+                size: 892MiB
+                capacity: 892MiB
+                capabilities: swap initialized
+                configuration: filesystem=swap name=swap pagesize=4095
+           *-volume:2
+                description: EFI partition
+                physical id: 3
+                bus info: scsi@0:0.0.0,3
+                logical name: /dev/sda3
+                logical name: /
+                serial: 45176fff-cf99-4f8e-96e5-1df2bc99f824
+                capacity: 118GiB
+                configuration: mount.fstype=btrfs mount.options=rw,noatime,ssd,discard,space_cache,subvolid=257,subvol=/root name=rootfs state=mounted
+     *-scsi:1
+          physical id: 2
+          logical name: scsi1
+          capabilities: emulated
+        *-disk
+             description: ATA Disk
+             product: WDC WD10EURX-63F
+             vendor: Western Digital
+             physical id: 0.0.0
+             bus info: scsi@1:0.0.0
+             logical name: /dev/sdb
+             version: 1A01
+             serial: WD-WMC1U5833814
+             size: 931GiB (1TB)
+             capabilities: partitioned partitioned:dos
+             configuration: ansiversion=5 sectorsize=4096 signature=3055dd21
+           *-volume:0
+                description: Windows NTFS volume
+                physical id: 1
+                bus info: scsi@1:0.0.0,1
+                logical name: /dev/sdb1
+                version: 3.1
+                serial: ce8b-d4a8
+                size: 126MiB
+                capacity: 128MiB
+                capabilities: primary bootable ntfs initialized
+                configuration: clustersize=4096 created=2012-12-07 09:08:58 filesystem=ntfs label=System Reserved state=clean
+           *-volume:1
+                description: Windows NTFS volume
+                physical id: 2
+                bus info: scsi@1:0.0.0,2
+                logical name: /dev/sdb2
+                logical name: /mnt/windows
+                version: 3.1
+                serial: 8a7cce56-9d68-6a4d-b6a0-5f07a04e2a75
+                size: 930GiB
+                capacity: 930GiB
+                capabilities: primary ntfs initialized
+                configuration: clustersize=4096 created=2012-12-07 09:08:59 filesystem=ntfs label=System mount.fstype=fuseblk mount.options=rw,nosuid,nodev,noatime,user_id=0,group_id=0,allow_other,blksize=4096 state=mounted
+           *-volume:2
+                description: Windows NTFS volume
+                physical id: 3
+                bus info: scsi@1:0.0.0,3
+                logical name: /dev/sdb3
+                version: 3.1
+                serial: 3cb2-54e9
+                size: 439MiB
+                capacity: 450MiB
+                capabilities: primary ntfs initialized
+                configuration: clustersize=4096 created=2015-09-15 15:05:56 filesystem=ntfs state=clean
+     *-scsi:2
+          physical id: 3
+          logical name: scsi2
+          capabilities: emulated
+        *-disk
+             description: ATA Disk
+             product: WDC WD20EURS-63S
+             vendor: Western Digital
+             physical id: 0.0.0
+             bus info: scsi@2:0.0.0
+             logical name: /dev/sdc
+             logical name: /mnt/storage
+             version: AB51
+             serial: WD-WCAZAL476830
+             size: 1863GiB (2TB)
+             configuration: ansiversion=5 mount.fstype=btrfs mount.options=rw,relatime,space_cache,subvolid=5,subvol=/ sectorsize=4096 state=mounted
+     *-scsi:3
+          physical id: 7
+          logical name: scsi3
+          capabilities: emulated
+        *-disk
+             description: ATA Disk
+             product: WDC WD20EURS-63S
+             vendor: Western Digital
+             physical id: 0.0.0
+             bus info: scsi@3:0.0.0
+             logical name: /dev/sdd
+             version: AB51
+             serial: WD-WCAZA7280157
+             size: 1863GiB (2TB)
+             configuration: ansiversion=5 sectorsize=4096
+     *-scsi:4
+          physical id: 8
+          logical name: scsi4
+          capabilities: emulated
+        *-cdrom
+             description: DVD-RAM writer
+             product: DVDRAM GH22NS70
+             vendor: HL-DT-ST
+             physical id: 0.0.0
+             bus info: scsi@4:0.0.0
+             logical name: /dev/cdrom
+             logical name: /dev/sr0
+             version: EX01
+             capabilities: removable audio cd-r cd-rw dvd dvd-r dvd-ram
+             configuration: ansiversion=5 status=nodisc
